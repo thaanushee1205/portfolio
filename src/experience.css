@@ -1,0 +1,43 @@
+/* Experience popup cards. Import AFTER typewriter.css in main.tsx. */
+#experience .xp-stage{position:relative;overflow:hidden;background:#000;border:0;border-radius:20px;padding:1.25rem 0 0;font-family:'Geist Mono',ui-monospace,monospace}
+#experience .xp-big{margin:0;text-align:center;white-space:nowrap;overflow:hidden;font:800 clamp(2.1rem,8vw,6.2rem)/1 'Geist Mono',ui-monospace,monospace;color:#7a6472;letter-spacing:-.02em}
+#experience .xp-big.peek{height:.5em;font-size:clamp(2.1rem,8vw,6.2rem);margin-top:2.5rem;box-sizing:content-box}
+#experience .xp-card{position:relative;width:min(640px,calc(100% - 9rem));margin:-.4rem auto 0;padding:2rem;background:#fbcfe8;color:#09090b;box-shadow:10px 10px 0 #fff}
+#experience .pop-next{animation:popNext .45s cubic-bezier(.2,.9,.3,1.2) both}
+#experience .pop-prev{animation:popPrev .45s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes popNext{from{opacity:0;transform:translateX(60px) scale(.92)}}
+@keyframes popPrev{from{opacity:0;transform:translateX(-60px) scale(.92)}}
+#experience .xp-title{margin:0 0 .5rem;padding:.55rem .8rem;background:#09090b;color:#fbcfe8;font:700 1.15rem 'Geist Mono',ui-monospace,monospace;letter-spacing:0}
+#experience .xp-period{margin:0 0 1.1rem;font:italic 500 .8rem 'Geist Mono',ui-monospace,monospace;color:#4a2a3b}
+#experience .xp-card ul{display:grid;gap:.9rem;margin:0;padding:0;list-style:none}
+#experience .xp-card li{position:relative;padding-left:1.7rem;font:500 .9rem/1.55 'Geist Mono',ui-monospace,monospace}
+#experience .xp-card li::before{content:'\2726';position:absolute;left:0;top:0;font-size:1.1rem;line-height:1.4}
+#experience .xp-co{margin:1.4rem 0 0;font:italic 600 .85rem 'Geist Mono',ui-monospace,monospace}
+#experience .xp-count{position:relative;margin:1.7rem 0 0;text-align:center;font:.72rem 'Geist Mono',ui-monospace,monospace;letter-spacing:.14em;color:#a78a9a}
+#experience .xp-arrow{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:64px;height:64px;background:none;border:0;color:#f9a8d4;cursor:pointer;transition:transform .2s,color .2s}
+#experience .xp-arrow.l{left:.75rem}#experience .xp-arrow.r{right:.75rem}
+#experience .xp-arrow.l:hover{transform:translateY(-50%) translateX(-4px);color:#fff}#experience .xp-arrow.r:hover{transform:translateY(-50%) translateX(4px);color:#fff}
+@media (max-width:760px){
+ #experience .xp-card{width:calc(100% - 2.5rem);padding:1.25rem}
+ #experience .xp-arrow{top:auto;bottom:.4rem;transform:none;width:52px;height:52px}
+ #experience .xp-arrow.l:hover,#experience .xp-arrow.r:hover{transform:none}
+ #experience .xp-count{margin-bottom:.5rem}
+}
+
+#work .work-stage{position:relative;overflow:hidden;background:#000;border:0;border-radius:20px;padding:1.25rem 0 0;font-family:'Geist Mono',ui-monospace,monospace}
+#work .work-card{width:min(760px,calc(100% - 9rem));margin:0 auto;padding:1.75rem;background:#fbcfe8;color:#09090b;box-shadow:10px 10px 0 #fff}
+#work .work-index{margin:0 0 .6rem;font:.68rem/1.3 'Geist Mono',ui-monospace,monospace;letter-spacing:.08em;color:#5b3651}
+#work .work-title{margin:0 0 .75rem;padding:.55rem .8rem;background:#09090b;color:#fbcfe8;font:700 1.15rem 'Geist Mono',ui-monospace,monospace}
+#work .work-summary{font-size:.88rem;line-height:1.55;color:#4a2a3b}
+#work .work-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+#work .work-details div{border-top:1px solid rgba(9,9,11,.35);padding-top:.65rem}
+#work .work-details dt{font-size:.68rem;text-transform:uppercase;color:#7a4a69}
+#work .work-details dd{font-size:.78rem;line-height:1.45;color:#09090b}
+#work .work-tags{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:1rem 0 0;padding:0}
+#work .work-tags li{font:.68rem 'Geist Mono',ui-monospace,monospace;border:1px solid rgba(9,9,11,.5);border-radius:6px;padding:.2rem .45rem}
+#work .work-count{margin:1rem 0;text-align:center;font:.72rem 'Geist Mono',ui-monospace,monospace;letter-spacing:.14em;color:#a78a9a}
+#work .work-arrow{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:64px;height:64px;background:none;border:0;color:#f9a8d4;cursor:pointer}
+#work .work-arrow.l{left:.75rem}#work .work-arrow.r{right:.75rem}
+#work .pop-next{animation:popNext .45s cubic-bezier(.2,.9,.3,1.2) both}
+#work .pop-prev{animation:popPrev .45s cubic-bezier(.2,.9,.3,1.2) both}
+@media(max-width:760px){#work .work-card{width:calc(100% - 2rem);padding:1.1rem;box-shadow:6px 6px 0 #fff}#work .work-details{grid-template-columns:1fr}#work .work-arrow{top:auto;bottom:.35rem;width:52px;height:52px;transform:none}}

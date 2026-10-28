@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap');
+/* Stack Matrix. All class names are prefixed sm- so nothing else in the site can override them. Import LAST. */
+.page,.foot,.hero{width:min(1150px,100% - 2.5rem)}
+.pill{max-width:780px}
+#toolkit h2{font:800 clamp(2.4rem,6vw,4.2rem)/1 'Syne','Geist',sans-serif;letter-spacing:-.03em}
+#toolkit h2::after{display:none}
+#toolkit h2 em{font:italic 400 1.1em 'Instrument Serif',Georgia,serif;letter-spacing:0;color:#cfcfd6;background:none;-webkit-text-fill-color:#cfcfd6}
+#toolkit .sm-stack{position:absolute;left:0;bottom:8vh;width:100vw;margin:0;overflow:hidden;padding:10px 0;display:flex;justify-content:center;mask-image:linear-gradient(90deg,transparent,#000 1%,#000 99%,transparent)}
+#toolkit .sm-track{display:flex;justify-content:center;width:max-content;gap:20px;align-items:stretch;animation:stack-marquee 45s linear infinite}
+#toolkit .sm-stack:hover .sm-track{animation-play-state:paused}
+#toolkit .sm-group{flex:0 0 auto;width:max-content;max-width:none;padding:25px;border:1px solid #232328;border-radius:20px;background:linear-gradient(180deg,#141417,#0f0f12);opacity:1;transform:none}
+@keyframes stack-marquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 10px))}}
+#toolkit .sm-group.grow{flex:1 1 auto}
+#toolkit .sm-head{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+#toolkit .sm-badge{font:500 .7rem 'Geist Mono',ui-monospace,monospace;color:#ff9f1c;background:rgba(255,159,28,.12);border:1px solid rgba(255,159,28,.35);border-radius:6px;padding:.2rem .5rem}
+#toolkit .sm-head h3{font:700 1.15rem 'Syne','Geist',sans-serif;flex:1;white-space:nowrap}
+#toolkit .sm-count{font:.72rem 'Geist Mono',ui-monospace,monospace;color:#7c7c86;margin-left:32px}
+#toolkit .sm-grid{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+#toolkit .sm-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;padding:6px 2px;border:1px solid #aeb4ba;border-radius:10px;background:#5f6368;font:400 8px/1.25 'Geist Mono',ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;color:#d1d5db;text-align:center;overflow-wrap:anywhere;cursor:pointer;transition:border-color .2s,transform .2s,color .2s,box-shadow .2s}
+#toolkit .sm-tile.small{width:73px;height:73px;gap:7px}
+#toolkit .sm-tile.big{width:120px;height:120px;font-size:.6rem;letter-spacing:.08em}
+#toolkit .sm-tile:hover{transform:translateY(-3px) scale(1.02);background:linear-gradient(135deg,#38bdf8,#8b5cf6,#ff5d8f,#ffd166,#22c55e,#38bdf8);background-size:300% 300%;border-color:#f4f4f5;color:#fff;box-shadow:0 12px 28px rgba(56,189,248,.22);animation:tile-rainbow 2.5s linear infinite}
+@keyframes tile-rainbow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+#toolkit .sm-tile.s-exploring:hover,#toolkit .sm-tile.s-learning:hover{border-color:#fff}
+#toolkit .sm-tile img,#toolkit .sm-letter{display:block;flex:none}
+#toolkit .sm-letter{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#8b5cf6,#38bdf8);color:#fff;font:700 1rem 'Syne',sans-serif}
+#toolkit .sm-tile.s-exploring{border:1px dashed #ff9f1c}#toolkit .sm-tile.s-exploring:hover{border-color:#fff}
+#toolkit .sm-tile.s-learning{border:1px dotted #fbbf24}#toolkit .sm-tile.s-learning:hover{border-color:#fff}
+#toolkit .sm-also{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0;padding:0;list-style:none;max-width:560px}
+#toolkit .sm-also li{font:.72rem 'Geist Mono',ui-monospace,monospace;color:#c4c4cc;border:1px solid #2a2a31;border-radius:8px;padding:.25rem .55rem;background:rgba(255,255,255,.02)}
+#toolkit .sm-also li.s-exploring{border:1px dashed #ff9f1c}
+#toolkit .sm-also li.s-learning{border:1px dotted #fbbf24}
+#toolkit .sm-also li::before{display:none}
+@media (max-width:640px){
+ #toolkit .sm-group{width:100%;padding:16px}
+ #toolkit .sm-head h3{white-space:normal}
+ #toolkit .sm-grid{grid-template-columns:repeat(auto-fill,minmax(73px,1fr))!important}
+ #toolkit .sm-tile.small,#toolkit .sm-tile.big{width:auto;height:auto;min-height:73px;padding:10px 4px}
+ .pill{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){#toolkit .sm-track{animation:none}#toolkit .sm-group{opacity:1;transform:none;transition:none}}

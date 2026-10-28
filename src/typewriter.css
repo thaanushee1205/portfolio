@@ -1,0 +1,6 @@
+/* Typewriter hero. Import AFTER hero.css and toolkit.css in main.tsx. */
+.hero .name{font:800 clamp(2.4rem,5.4vw,4rem)/1 'Syne','Geist',sans-serif;letter-spacing:-.03em;white-space:nowrap;overflow-wrap:normal;margin:.15rem 0 0}
+.roles{font:700 clamp(1.35rem,3vw,2rem)/1.15 'Syne','Geist',sans-serif;min-height:1.3em;margin-top:.65rem;color:#f4f4f5}
+.caret{display:inline-block;width:3px;height:1.05em;margin-left:4px;vertical-align:text-bottom;background:#ff9f1c;animation:caret 1s steps(2) infinite}
+@keyframes caret{50%{opacity:0}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
